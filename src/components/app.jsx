@@ -30,7 +30,7 @@ class App extends Component {
           <GifList gifs={this.state.gifs} />
         </div>
       </div>
-    )
+    );
   }
 }
 
