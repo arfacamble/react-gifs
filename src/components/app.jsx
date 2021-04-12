@@ -8,8 +8,13 @@ class App extends Component {
     super(props);
 
     this.state = {
-      gifs: ["4JU6VYFXQvwlNxRFSU", "1eExou2TFHiq8bhuYd", "R43IWSxAvs73E0dph8", "ppFKTGfSETHDq"],
-      selectedGif: null
+      gifs: [
+        { id: "4JU6VYFXQvwlNxRFSU" },
+        { id: "1eExou2TFHiq8bhuYd" },
+        { id: "R43IWSxAvs73E0dph8" },
+        { id: "ppFKTGfSETHDq" }
+      ],
+      selectedGif: "8RnFKcnRX5P6zJU0xm"
     };
   }
 
@@ -23,7 +28,7 @@ class App extends Component {
         <div className="left-scene">
           <SearchBar refreshGifList={this.handleQuery} />
           <div className="selected-gif">
-            <Gif id="8RnFKcnRX5P6zJU0xm" />
+            <Gif id={this.state.selectedGif} />
           </div>
         </div>
         <div className="right-scene">
