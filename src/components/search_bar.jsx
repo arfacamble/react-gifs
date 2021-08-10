@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class SearchBar extends Component {
   handleQuery = (event) => {
-    this.props.refreshGifList(event.target.value);
+    const { refreshGifList } = this.props;
+    refreshGifList(event.target.value);
   }
 
   render() {

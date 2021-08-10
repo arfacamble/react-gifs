@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   search = (query) => {
-    giphy('API_KEY').search({
+    giphy('').search({
       q: query,
       rating: 'g',
       limit: 12
@@ -35,16 +35,17 @@ class App extends Component {
   }
 
   render() {
+    const { gifs, selectedGifId } = this.state;
     return (
       <div>
         <div className="left-scene">
           <SearchBar refreshGifList={this.search} />
           <div className="selected-gif">
-            <Gif id={this.state.selectedGifId} />
+            <Gif id={selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
+          <GifList gifs={gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
@@ -52,5 +53,3 @@ class App extends Component {
 }
 
 export default App;
-
-// < Gif selectedGif={this.state.selectedGif} />

@@ -3,9 +3,10 @@ import Gif from './gif';
 
 // class GifList extends Component {
 //   render() {
+//     const { gifs } = this.props;
 //     return (
 //       <div className="gif-list">
-//         {this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} selectGif={this.props.selectGif} />)}
+//         {gifs.map((gif) => <Gif id={gif.id} key={gif.id} selectGif={this.props.selectGif} />)}
 //       </div>
 //     );
 //   }
